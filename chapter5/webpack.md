@@ -1,6 +1,4 @@
-##### webpack 打包同步引用和异步引用的区别
-
-##### 打包同步引用和异步引用的区别
+#### webpack 打包同步引用和异步引用的区别
 
 -   先说一下 import 和 require 的异同：import 和 require 本质上都是同步导入，也就是 buildtime 的时候就把引用的东西都导入了，区别就是 import 导入的是一个引用，而 require 引入的相当于 const（如果导入的是值，就是不变的； 如果导入的是对象，则值是可变的）。如果想要异步，runtime 的时候才知道值的内容，需要使用 import()或者 require.ensure()
 
