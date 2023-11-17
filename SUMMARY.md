@@ -3,7 +3,7 @@
 -   [Introduction](README.md)
 -   [js 基础](chapter1/README.md)
     -   [模块化](chapter1/模块化.1.md)
-    -   [Section1.2](chapter1/section1.2.md)
+    -   [this 指向](chapter1/this.md)
 -   [网络](chapter2/README.md)
     -   [浏览器缓存](chapter2/浏览器缓存.md)
     -   [https](chapter2/https.md)

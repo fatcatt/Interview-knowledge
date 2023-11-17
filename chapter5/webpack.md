@@ -1,6 +1,6 @@
 #### webpack 打包同步引用和异步引用的区别
 
--   先说一下 import 和 require 的异同：import 和 require 本质上都是同步导入，也就是 buildtime 的时候就把引用的东西都导入了，区别就是 import 导入的是一个引用，而 require 引入的相当于 const（如果导入的是值，就是不变的； 如果导入的是对象，则值是可变的）。如果想要异步，runtime 的时候才知道值的内容，需要使用 import()或者 require.ensure()
+-   先说一下 import 和 require 的异同：import 和 require 本质上都是同步导入，区别就是 import 导入的是一个引用，而 require 引入的相当于 const（如果导入的是值，就是不变的； 如果导入的是对象，则值是可变的）。如果想要异步，runtime 的时候才知道值的内容，需要使用 import()或者 require.ensure()
 
 -   webpack 打包的区别在同步和异步处理的不同区别是，同步打包会打到一个包里，比如最简版就是打到 bundles.js。而异步处理会打出 0.js, 1.js, 2.js 这样几个不同的引入包文件，等运行的时候，用哪个去加载哪个。异步的实现大概就是这样的，遇到异步模块时，使用**webpack_require**.e 函数去把异步代码加载进来。该函数会在 html 的 head 中动态增加 script 标签，src 指向指定的异步模块存放的文件
 
